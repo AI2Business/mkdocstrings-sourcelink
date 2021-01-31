@@ -97,7 +97,6 @@ class Utilities(BuilderUtilities):
     def make_source_link(
         cls: Any,
         project_url: Union[str, Dict[str, str]],
-        icon: str = None,
         source: str = "**source code**",
     ) -> str:
         """make_source_link [summary]
@@ -107,7 +106,6 @@ class Utilities(BuilderUtilities):
         Args:
             cls (Any): [description]
             project_url (Union[str, Dict[str, str]]): [description]
-            icon (str, optional): [description]. Defaults to None.
             source (str, optional): [description]. Defaults to "**source code**".
 
         Returns:
@@ -124,13 +122,6 @@ class Utilities(BuilderUtilities):
             path = cls.__module__.replace(".", "/")
             line = inspect.getsourcelines(cls)[-1]
 
-        if icon:
-            return (
-                f'<span style="float:right;">'
-                f"{icon}"
-                f"[{source}]({project_url}/{path}.py#L{line})"
-                f"</span>"
-            )
         return (
             f'<span style="float:right;">'
             f"[{source}]({project_url}/{path}.py#L{line})"
