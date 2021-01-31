@@ -3,7 +3,7 @@ import importlib
 import inspect
 from abc import ABC, abstractmethod
 from pathlib import Path
-from typing import Any, Optional, Union
+from typing import Any, Dict, Optional, Union
 
 
 class BuilderUtilities(ABC):
@@ -92,10 +92,13 @@ class Utilities(BuilderUtilities):
         Returns:
             str: [description]
         """
-        return f":::{element}\n"
+        return f"### :::{element}\n"
 
     def make_source_link(
-        cls: Any, project_url: str, icon: str = None, source: str = "**source code**"
+        cls: Any,
+        project_url: Union[str, Dict[str, str]],
+        icon: str = None,
+        source: str = "**source code**",
     ) -> str:
         """make_source_link [summary]
 
@@ -103,7 +106,7 @@ class Utilities(BuilderUtilities):
 
         Args:
             cls (Any): [description]
-            project_url (str): [description]
+            project_url (Union[str, Dict[str, str]]): [description]
             icon (str, optional): [description]. Defaults to None.
             source (str, optional): [description]. Defaults to "**source code**".
 
@@ -134,7 +137,7 @@ class Utilities(BuilderUtilities):
             f"</span>"
         )
 
-    def make_title(cls: Any, titles_size: str) -> str:
+    def make_title(cls: Any, titles_size: str, underline_title: bool) -> str:
         """make_title [summary]
 
         [extended_summary]
@@ -146,9 +149,10 @@ class Utilities(BuilderUtilities):
         Returns:
             str: [description]
         """
+        title_underline = "\n---\n" if underline_title else "\n"
         if isinstance(cls, property):
-            return f"{titles_size} {cls.fget.__name__}\n"
-        return f"{titles_size} {cls.__name__}\n"
+            return f"{titles_size} {cls.fget.__name__}{title_underline}"
+        return f"{titles_size} {cls.__name__}{title_underline}"
 
     def ismethod(function: Any) -> Union[Any, bool]:
         """ismethod [summary]

@@ -42,13 +42,14 @@ class MkDocGenerator(Utilities, BuilderMkDoc):
 
     def __init__(
         self,
-        dest_dir: str,
+        dest_dir: Union[str, Path],
         documentation: Dict[str, Dict[str, List[str]]] = {},
         project_url: Union[str, Dict[str, str]] = None,
         template_dir: str = None,
         examples_dir: str = None,
         markdown_files: Dict[str, Dict[str, List[str]]] = None,
         titles_size: str = "##",
+        underline_title: bool = False,
         source: str = "**source code**",
         icon: str = None,
     ) -> None:
@@ -57,7 +58,7 @@ class MkDocGenerator(Utilities, BuilderMkDoc):
         [extended_summary]
 
         Args:
-            dest_dir (str): [description]
+            dest_dir (Union[str, Path]): [description]
             documentation (Dict[str, Dict[str, List[str]]], optional): [description]. Defaults to {}.
             project_url (Union[str, Dict[str, str]], optional): [description]. Defaults to None.
             template_dir (str, optional): [description]. Defaults to None.
@@ -74,6 +75,7 @@ class MkDocGenerator(Utilities, BuilderMkDoc):
         self.examples_dir = Utilities.return_as_Path(examples_dir)
         self.markdown_files = markdown_files
         self.titles_size = titles_size
+        self.underline_title = underline_title
         self.source = source
         self.icon = icon
 
@@ -90,15 +92,10 @@ class MkDocGenerator(Utilities, BuilderMkDoc):
         """
         if isinstance(element, str):
             object_ = Utilities.import_object(element)
-            if Utilities.ismethod(object_):
-                # we remove the modules when displaying the methods
-                signature_override = ".".join(element.split(".")[-2:])
-            else:
-                signature_override = element
+            signature = element
         else:
-            signature_override = None
+            signature = None
             object_ = element
-
         subblocks = []
         if self.project_url:
             subblocks.append(
@@ -107,9 +104,11 @@ class MkDocGenerator(Utilities, BuilderMkDoc):
                 )
             )
 
-        subblocks.append(Utilities.make_title(object_, self.titles_size))
-        subblocks.append(Utilities.element_to_mkdocstrings(signature_override))
-        return "\n\n".join(subblocks) + "\n\n----\n\n"
+        subblocks.append(
+            Utilities.make_title(object_, self.titles_size, self.underline_title)
+        )
+        subblocks.append(Utilities.element_to_mkdocstrings(signature))
+        return "\n\n".join(subblocks) + "\n\n"
 
     def _initialize_generate(self) -> None:
         """_initialize_generate [summary]

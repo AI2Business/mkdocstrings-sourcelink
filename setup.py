@@ -19,7 +19,7 @@ setup(
     long_description_content_type="text/markdown",
     url="https://github.com/AI2Business/mkdocstrings-sourcelink",
     license="Apache License 2.0",
-    extras_require={"tests": ["pytest", "pytest-pep8"]},
+    extras_require={"tests": ["pytest", "pytest-cov"]},
     classifiers=[
         "Natural Language :: English",
         "Operating System :: OS Independent",
