@@ -11,6 +11,10 @@ repos:
       rev: ''
       hooks:
         - id: check-added-large-files
+    - repo: https://github.com/pycqa/pydocstyle
+      rev: 5.1.1  # pick a git hash / tag to point to
+      hooks:
+      -  id: pydocstyle
     - repo: local
       hooks:
         - id: pylint
