@@ -11,6 +11,14 @@ repos:
       rev: ''
       hooks:
         - id: check-added-large-files
+    - repo: https://github.com/asottile/setup-cfg-fmt
+      rev: v1.16.0
+      hooks:
+        - id: setup-cfg-fmt
+    - repo: https://github.com/pycqa/pydocstyle
+      rev: 5.1.1  # pick a git hash / tag to point to
+      hooks:
+      - id: pydocstyle
     - repo: local
       hooks:
         - id: pylint
@@ -19,9 +27,4 @@ repos:
           language: system
           always_run: true
           pass_filenames: false
-        - id: pydocstyle
-          name: pydocstyle
-          entry: pydocstyle mkdocstrings_sourcelink
-          language: python
-          types: [python]
     

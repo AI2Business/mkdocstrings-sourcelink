@@ -130,6 +130,8 @@ plugins:
 
 nav:
   - Home: index.md
-  - Documentation: auto_generator.md
-  - Tools: toolbox.md
-  #- Tools: toolbox.md
+  - Documentation:
+    - About: about.md
+    - Automatic Doc Generator: auto_generator.md
+    - Tools: toolbox.md
+  - API: api.md
