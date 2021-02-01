@@ -81,7 +81,7 @@ class Utilities(BuilderUtilities):
         file_path.parent.mkdir(parents=True, exist_ok=True)
         file_path.write_text(markdown_text, encoding="utf-8")
 
-    def element_to_mkdocstrings(element: str) -> str:
+    def element_to_mkdocstrings(element: str, titles_size: str) -> str:
         """element_to_mkdocstrings [summary]
 
         [extended_summary]
@@ -92,7 +92,7 @@ class Utilities(BuilderUtilities):
         Returns:
             str: [description]
         """
-        return f"### :::{element}\n"
+        return f"##{titles_size} :::{element}\n"
 
     def make_source_link(
         cls: Any,
@@ -142,8 +142,8 @@ class Utilities(BuilderUtilities):
         """
         title_underline = "\n---\n" if underline_title else "\n"
         if isinstance(cls, property):
-            return f"{titles_size} {cls.fget.__name__}{title_underline}"
-        return f"{titles_size} {cls.__name__}{title_underline}"
+            return f"#{titles_size} {cls.fget.__name__}{title_underline}"
+        return f"#{titles_size} {cls.__name__}{title_underline}"
 
     def ismethod(function: Any) -> Union[Any, bool]:
         """ismethod [summary]
