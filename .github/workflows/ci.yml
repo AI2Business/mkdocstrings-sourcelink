@@ -36,15 +36,15 @@ jobs:
           pip install -r dev-requirements.txt
       - name: Install mkdocstrings-sourcelink
         run: |
-          pip install -e .
+          pip install .
       - name: Lint with black and isort
         run: |
           isort --check --diff .
           black --check --diff .
-      #- name: Test with pytest and generate coverage report
-      #  run: |
-      #    pytest -vv --cov=./mkdocstrings_sourcelink --cov-report=xml
-      #- name: Codecov
-      #  uses: codecov/codecov-action@v1
-      #  with:
-      #    token: ${{ secrets.CODECOV_TOKEN }}
+      - name: Test with pytest and generate coverage report
+        run: |
+          pytest -vv --cov=./mkdocstrings_sourcelink --cov-report=xml
+      - name: Codecov
+        uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
