@@ -1,0 +1,12 @@
+click-man
+mkdocs
+mkdocstrings
+mkdocs-exclude
+mkdocs-macros-plugin
+mkdocs-material
+mkdocs-minify-plugin
+mkdocs-redirects
+mkdocs-git-revision-date-plugin
+pymdown-extensions
+mkdocs-git-revision-date-localized-plugin
+pyspelling

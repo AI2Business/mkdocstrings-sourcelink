@@ -1,0 +1,6 @@
+isort
+black
+pytest
+pytest-cov
+pytest-clarity
+pydocstyle
