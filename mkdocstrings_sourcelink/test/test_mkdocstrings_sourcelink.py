@@ -1,4 +1,3 @@
-from os import write
 from pathlib import Path
 
 import pytest
@@ -109,7 +108,7 @@ def test_example():
 def test_tmp_failed():
     with open(_tmp_dir / "template_test.md", "w") as f:
         f.write("hallo")
-    with pytest.raises(Exception) as e_info:
+    with pytest.raises(Exception):
         MkDocGenerator(
             _dir,
             {
@@ -122,7 +121,6 @@ def test_tmp_failed():
             "https://github.com/AI2Business/mkdocstrings-sourcelink",
             template_dir=_tmp_dir,
         ).generate
-    #
 
 
 def test_tmp_run():
