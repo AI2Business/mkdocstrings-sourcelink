@@ -41,10 +41,10 @@ jobs:
         run: |
           isort --check --diff .
           black --check --diff .
-      - name: Test with pytest and generate coverage report
-        run: |
-          pytest -vv --cov=./mkdocstrings_sourcelink --cov-report=xml
-      - name: Codecov
-        uses: codecov/codecov-action@v1
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
+      #- name: Test with pytest and generate coverage report
+      #  run: |
+      #    pytest -vv --cov=./mkdocstrings_sourcelink --cov-report=xml
+      #- name: Codecov
+      #  uses: codecov/codecov-action@v1
+      #  with:
+      #    token: ${{ secrets.CODECOV_TOKEN }}
