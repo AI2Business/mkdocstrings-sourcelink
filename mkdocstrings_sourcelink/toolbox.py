@@ -3,7 +3,7 @@ import importlib
 import inspect
 from abc import ABC, abstractmethod
 from pathlib import Path
-from typing import Any, Dict, Optional, Union
+from typing import Dict, Optional, Union
 
 
 class BuilderUtilities(ABC):
@@ -116,7 +116,10 @@ class Utilities(BuilderUtilities):
             and replace `mdl` by `material`.
         """
         if isinstance(project_url, dict):
-            base_module = cls.__module__.split(".")[0]
+            if isinstance(cls, property):
+                base_module = cls.fget.__module__.split(".")[0]
+            else:
+                base_module = cls.__module__.split(".")[0]
             project_url = project_url[base_module]
 
         if isinstance(cls, property):
