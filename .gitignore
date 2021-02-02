@@ -1,0 +1,7 @@
+mkdocstrings_sourcelink/__pycache__
+.DS_Store
+.dccache
+.vscode
+.mypy_cache
+.pytest_cache
+*.egg-info

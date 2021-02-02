@@ -1,0 +1,32 @@
+repos:
+    - repo: https://github.com/psf/black
+      rev: ''
+      hooks:
+        - id: black
+    - repo: https://github.com/pre-commit/mirrors-isort
+      rev: ''  # Use the revision sha / tag you want to point at
+      hooks:
+        - id: isort
+    - repo: https://github.com/pre-commit/pre-commit-hooks
+      rev: ''
+      hooks:
+        - id: check-added-large-files
+    - repo: https://github.com/asottile/setup-cfg-fmt
+      rev: v1.16.0
+      hooks:
+        - id: setup-cfg-fmt
+    - repo: local
+      hooks:
+        - id: pylint
+          name: pylint
+          entry: pylint mkdocstrings_sourcelink
+          language: system
+          always_run: true
+          pass_filenames: false
+        - id: pylint
+          name: pydocstyle
+          entry: pydocstyle mkdocstrings_sourcelink
+          language: system
+          always_run: true
+          pass_filenames: false
+    
