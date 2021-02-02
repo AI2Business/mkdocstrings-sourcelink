@@ -48,7 +48,7 @@ class MkDocGenerator(Utilities, BuilderMkDoc):
     def __init__(
         self,
         dest_dir: Union[str, Path],
-        documentation: Dict[str, Dict[str, List[str]]] = {},
+        documentation: Dict[str, Dict[str, List[str]]],
         project_url: Union[str, Dict[str, str]] = None,
         template_dir: Union[str, Path] = None,
         example_dir: Union[str, Path] = None,
