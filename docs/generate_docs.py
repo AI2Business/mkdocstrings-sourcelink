@@ -1,4 +1,3 @@
-"""Generate Docstring via MkDocGenerator of mkdocstrings-sourcelink."""
 from pathlib import Path
 
 from mkdocstrings_sourcelink import MkDocGenerator

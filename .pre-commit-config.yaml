@@ -15,15 +15,17 @@ repos:
       rev: v1.16.0
       hooks:
         - id: setup-cfg-fmt
-    - repo: https://github.com/pycqa/pydocstyle
-      rev: 5.1.1  # pick a git hash / tag to point to
-      hooks:
-      - id: pydocstyle
     - repo: local
       hooks:
         - id: pylint
           name: pylint
           entry: pylint mkdocstrings_sourcelink
+          language: system
+          always_run: true
+          pass_filenames: false
+        - id: pylint
+          name: pydocstyle
+          entry: pydocstyle mkdocstrings_sourcelink
           language: system
           always_run: true
           pass_filenames: false
