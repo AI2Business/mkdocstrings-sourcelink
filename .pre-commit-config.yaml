@@ -1,20 +1,25 @@
 repos:
     - repo: https://github.com/psf/black
-      rev: ''
+      rev: '20.8b1'
       hooks:
         - id: black
     - repo: https://github.com/pre-commit/mirrors-isort
-      rev: ''  # Use the revision sha / tag you want to point at
+      rev: 'v5.7.0'  # Use the revision sha / tag you want to point at
       hooks:
         - id: isort
     - repo: https://github.com/pre-commit/pre-commit-hooks
-      rev: ''
+      rev: 'v3.4.0'
       hooks:
         - id: check-added-large-files
     - repo: https://github.com/asottile/setup-cfg-fmt
-      rev: v1.16.0
+      rev: 'v1.16.0'
       hooks:
         - id: setup-cfg-fmt
+    - repo: https://github.com/pre-commit/pre-commit-hooks
+      rev: v3.4.0  # Use the ref you want to point at
+      hooks:
+      - id: trailing-whitespace
+      - id: check-yaml
     - repo: local
       hooks:
         - id: pylint
@@ -29,4 +34,3 @@ repos:
           language: system
           always_run: true
           pass_filenames: false
-    
