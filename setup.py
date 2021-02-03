@@ -7,7 +7,7 @@ readme = this_file.parent / "README.md"
 
 
 setup(
-    name="mkdocstrings-sourcelink",
+    name="mkdocstrings_sourcelink",
     version="0.3.0",
     packages=find_packages(),
     install_requires=["markdown", "sphinx", "black==20.8b1"],
