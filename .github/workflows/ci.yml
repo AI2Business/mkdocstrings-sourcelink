@@ -42,7 +42,7 @@ jobs:
           isort --check --diff .
           black --check --diff .
           pylint mkdocstrings_sourcelink/
-          pydocstyle
+          pydocstyle mkdocstrings_sourcelink/
       - name: Test with pytest and generate coverage report
         run: |
           pytest -vv --cov=./mkdocstrings_sourcelink --cov-report=xml
