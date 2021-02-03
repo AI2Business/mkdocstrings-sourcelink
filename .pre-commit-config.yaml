@@ -19,15 +19,16 @@ repos:
       rev: v3.4.0  # Use the ref you want to point at
       hooks:
       - id: trailing-whitespace
-    - repo: https://github.com/pre-commit/mirrors-pylint
-      rev: 'v2.6.0'  # Use the sha / tag you want to point at
+      - id: check-yaml
+    - repo: local
       hooks:
         - id: pylint
           name: pylint
           entry: pylint mkdocstrings_sourcelink
-    - repo: https://github.com/pycqa/pydocstyle
-      rev: 5.1.1  # pick a git hash / tag to point to
-      hooks:
-      - id: pydocstyle
-        name: pydocstyle
-        entry: pydocstyle mkdocstrings_sourcelink
+          language: system
+          pass_filenames: false
+        - id: pydocstyle
+          name: pydocstyle
+          entry: pydocstyle mkdocstrings_sourcelink
+          language: system
+          pass_filenames: false
