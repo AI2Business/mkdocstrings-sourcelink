@@ -36,7 +36,6 @@ MkDocGenerator(
     root / "docs" / "src",
     pages,
     "https://github.com/AI2Business/mkdocstrings-sourcelink",
-    root / "docs" / "tmp",
     markdown_files=markdown_files,
     underline_title=True,
     source=":material-github::material-source-branch:",

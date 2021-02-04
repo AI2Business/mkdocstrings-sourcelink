@@ -1,7 +1,7 @@
 """Tools for the automatic source link generation for mkdocstrings."""
 import importlib
 import inspect
-from abc import ABC, abstractstaticmethod
+from abc import ABC, abstractmethod
 from pathlib import Path
 from typing import Dict, Optional, Union
 
@@ -16,39 +16,38 @@ class BuilderUtilities(ABC):
              inheritance.
     """
 
-    @abstractstaticmethod
-    def insert_in_file(markdown_text: str, file_path: Path) -> None:
-        """Abstract staticmethod of `insert_in_file`."""
+    @abstractmethod
+    def insert_in_file(self) -> None:
+        """Abstract method of `insert_in_file`."""
 
-    @abstractstaticmethod
-    def element_to_mkdocstrings(element: str, titles_size: str) -> str:
-        """Abstract staticmethod of `element_to_mkdocstrings`."""
+    @abstractmethod
+    def element_to_mkdocstrings(self) -> None:
+        """Abstract method of `element_to_mkdocstrings`."""
 
-    @abstractstaticmethod
-    def make_source_link(
-        cls: classmethod,
-        project_url: Union[str, Dict[str, str]],
-        source: str = "**source code**",
-    ) -> str:
-        """Abstract staticmethod of `make_title`."""
+    @abstractmethod
+    def make_source_link(self) -> None:
+        """Abstract method of `make_source_link`."""
 
-    @abstractstaticmethod
-    def make_title(cls: classmethod, titles_size: str, underline_title: bool) -> str:
-        """Abstract staticmethod of `import_object`."""
+    @abstractmethod
+    def make_title(self) -> None:
+        """Abstract method of `make_title`."""
 
-    @abstractstaticmethod
-    def return_as_Path(path: str = None) -> Optional[Path]:
-        """Abstract staticmethod of `return_as_Path`."""
+    @abstractmethod
+    def import_object(self) -> None:
+        """Abstract method of `import_object`."""
+
+    @abstractmethod
+    def return_as_Path(self) -> None:
+        """Abstract method of `return_as_Path`."""
 
 
 class Utilities(BuilderUtilities):
     """The `Utilities` build the mkdocstrings and generate the hyperlinks to the source code.
 
     Args:
-        AbstractUtilities (class): Builder class of the abstract staticmethods of `Utilities`.
+        AbstractUtilities (class): Builder class of the abstract methods of `Utilities`.
     """
 
-    @staticmethod
     def insert_in_file(markdown_text: str, file_path: Path) -> None:
         """Insert the markdown formatted text into a new or existing file.
 
@@ -74,7 +73,6 @@ class Utilities(BuilderUtilities):
         file_path.parent.mkdir(parents=True, exist_ok=True)
         file_path.write_text(markdown_text, encoding="utf-8")
 
-    @staticmethod
     def element_to_mkdocstrings(element: str, titles_size: str) -> str:
         """Converts point separated string into the mkdocstrings format.
 
@@ -92,7 +90,6 @@ class Utilities(BuilderUtilities):
         """
         return f"##{titles_size} :::{element}\n"
 
-    @staticmethod
     def make_source_link(
         cls: classmethod,
         project_url: Union[str, Dict[str, str]],
@@ -138,7 +135,6 @@ class Utilities(BuilderUtilities):
             f"</span>"
         )
 
-    @staticmethod
     def make_title(cls: classmethod, titles_size: str, underline_title: bool) -> str:
         """Make the title of the class, function, or method.
 
@@ -155,7 +151,6 @@ class Utilities(BuilderUtilities):
             return f"#{titles_size} {cls.fget.__name__}{title_underline}"
         return f"#{titles_size} {cls.__name__}{title_underline}"
 
-    @staticmethod
     def import_object(element: str) -> object:
         """Import an object like class, function, or method from a string.
 
@@ -176,7 +171,6 @@ class Utilities(BuilderUtilities):
 
         return last_object_got
 
-    @staticmethod
     def return_as_Path(path: str = None) -> Optional[Path]:
         """Converts strings to Path of pathlib.
 

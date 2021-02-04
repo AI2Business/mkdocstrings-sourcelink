@@ -6,13 +6,18 @@ name = "pypi"
 [packages]
 
 [dev-packages]
-isort = "*"
-black = "*"
-pytest = "*"
-pytest-cov = "*"
-pytest-clarity = "*"
-pydocstyle = "*"
-pylint = "*"
+click-man = "*"
+mkdocs = "*"
+mkdocstrings = "*"
+mkdocs-exclude = "*"
+mkdocs-macros-plugin = "*"
+mkdocs-material = "*"
+mkdocs-minify-plugin = "*"
+mkdocs-redirects = "*"
+mkdocs-git-revision-date-plugin = "*"
+pymdown-extensions = "*"
+mkdocs-git-revision-date-localized-plugin = "*"
+pyspelling = "*"
 
 [requires]
 python_version = "3.8"
