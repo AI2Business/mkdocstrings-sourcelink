@@ -19,6 +19,8 @@ repos:
       rev: v3.4.0  # Use the ref you want to point at
       hooks:
       - id: trailing-whitespace
+      - id: check-yaml
+        exclude: docs/mkdocs.yml
     - repo: local
       hooks:
         - id: pylint
