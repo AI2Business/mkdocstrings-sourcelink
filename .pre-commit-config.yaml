@@ -27,7 +27,6 @@ repos:
       - id: pylint
         name: pylint
         entry: pylint mkdocstrings_sourcelink
-        language: system
         pass_filenames: false
         always_run: true
     - repo: https://github.com/PyCQA/pydocstyle
@@ -36,6 +35,5 @@ repos:
         - id: pydocstyle
           name: pydocstyle
           entry: pydocstyle mkdocstrings_sourcelink
-          language: system
           pass_filenames: false
           always_run: true
