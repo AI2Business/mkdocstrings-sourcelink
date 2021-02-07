@@ -7,31 +7,31 @@ template: |
   # Who Contributes
   $CONTRIBUTORS
 categories:
-  - title: '🏆 Breaking'
-    label: 'type: breaking'
+  - title: '🏆 Milestone'
+    label: 'type: milestone'
   - title: '🚀 New'
-    label: 'type: feature'
+    label: 'type: enhancement'
   - title: '🐛 Bug Fixes'
     label: 'type: bug'
   - title: '🧰 Maintenance'
     label: 'type: maintenance'
   - title: '🗂 Documentation'
-    label: 'type: docs'
+    label: 'type: documentation'
   - title: '🔗 Dependency Updates'
     label: 'type: dependencies'
 
 version-resolver:
   major:
     labels:
-      - 'type: breaking'
+      - 'type: milestone'
   minor:
     labels:
-      - 'type: feature'
+      - 'type: enhancement'
   patch:
     labels:
       - 'type: bug'
       - 'type: maintenance'
-      - 'type: docs'
+      - 'type: documentation'
       - 'type: dependencies'
       - 'type: security'
 
