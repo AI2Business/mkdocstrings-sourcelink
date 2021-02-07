@@ -32,7 +32,7 @@ pages = {
         ],
     },
 }
-markdown_files = {"HOME": {"index.md": ["README.md"]}}
+markdown_files = {"HOME": {"index.md": ["CODE_OF_CONDUCT.md"]}}
 root = Path(__file__).resolve().parents[1]
 _dir = root / "test" / "docs" / "src"
 _tmp_dir = root / "test" / "docs" / "tmp"
