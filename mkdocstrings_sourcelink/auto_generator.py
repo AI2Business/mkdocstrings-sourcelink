@@ -148,12 +148,7 @@ class MkDocGenerator(Utilities, BuilderMkDoc):
                  `mkdocstrings_sourcelink.auto_generator.MkDocGenerator.__init__` into a markdown
                  conformed string.
         """
-        if isinstance(element, str):
-            object_ = Utilities.import_object(element)
-            signature = element
-        else:
-            signature = None
-            object_ = element
+        object_ = Utilities.import_object(element)
         subblocks = []
         if self.project_url:
             subblocks.append(
@@ -163,7 +158,7 @@ class MkDocGenerator(Utilities, BuilderMkDoc):
         subblocks.append(
             Utilities.make_title(object_, self.titles_size, self.underline_title)
         )
-        subblocks.append(Utilities.element_to_mkdocstrings(signature, self.titles_size))
+        subblocks.append(Utilities.element_to_mkdocstrings(element, self.titles_size))
         return "\n\n".join(subblocks) + "\n\n"
 
     def initialize_generate(self) -> None:

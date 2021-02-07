@@ -160,10 +160,11 @@ class Utilities(BuilderUtilities):
         """Import an object like class, function, or method from a string.
 
         Args:
-            element (str): [description]
+            element (str): String of class, function, or method, which should be converted to an
+                 object.
 
         Returns:
-            object: [description]
+            object: Class, function, or method object for the giving element.
         """
         last_object_got = None
         seen_names = []
@@ -184,7 +185,7 @@ class Utilities(BuilderUtilities):
             path (str, optional): String of a filename.
 
         Returns:
-            Optional[Path]: Path object of the intial filename.
+            Optional[Path]: Path object of the initial filename.
         """
         if path:
             return Path(path)

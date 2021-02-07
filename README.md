@@ -21,4 +21,3 @@ The usage requires just three steps:
 1. `❯ python generate_docs.py`
 2. `mkdocs.yml`
 3. `❯ mkdocs deploy`
-
