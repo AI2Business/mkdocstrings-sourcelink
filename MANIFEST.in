@@ -1,0 +1,10 @@
+include pyproject.toml
+
+# Include the README, CODE_OF_CONDUCT, CONTRIBUTING
+include *.md
+
+# Include LICENSE
+include LICENSE
+
+# Include requirement files for documentation and development
+include *requirements.txt
