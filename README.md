@@ -3,6 +3,7 @@
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/AI2Business/mkdocstrings-sourcelink/main.svg)](https://results.pre-commit.ci/latest/github/AI2Business/mkdocstrings-sourcelink/main)
 [![codecov](https://codecov.io/gh/AI2Business/mkdocstrings-sourcelink/branch/main/graph/badge.svg?token=DKE0SHCRF7)](https://codecov.io/gh/AI2Business/mkdocstrings-sourcelink)
 [![Code Style: Black](https://img.shields.io/badge/code%20style-black-black.svg)](https://github.com/ambv/black)
+[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/AI2Business/mkdocstrings-sourcelink.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/AI2Business/mkdocstrings-sourcelink/context:python)
 
 # mkdocstrings-sourcelink
 

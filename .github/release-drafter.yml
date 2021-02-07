@@ -1,0 +1,39 @@
+name-template: 'v$RESOLVED_VERSION 🌈'
+tag-template: 'v$RESOLVED_VERSION'
+template: |
+  # What's Changed
+  $CHANGES
+
+  # Who Contributes
+  $CONTRIBUTORS
+categories:
+  - title: '🏆 Milestone'
+    label: 'type: milestone'
+  - title: '🚀 New'
+    label: 'type: enhancement'
+  - title: '🐛 Bug Fixes'
+    label: 'type: bug'
+  - title: '🧰 Maintenance'
+    label: 'type: maintenance'
+  - title: '🗂 Documentation'
+    label: 'type: documentation'
+  - title: '🔗 Dependency Updates'
+    label: 'type: dependencies'
+
+version-resolver:
+  major:
+    labels:
+      - 'type: milestone'
+  minor:
+    labels:
+      - 'type: enhancement'
+  patch:
+    labels:
+      - 'type: bug'
+      - 'type: maintenance'
+      - 'type: documentation'
+      - 'type: dependencies'
+      - 'type: security'
+
+exclude-labels:
+  - 'skip-changelog'
