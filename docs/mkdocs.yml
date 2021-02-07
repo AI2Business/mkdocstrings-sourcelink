@@ -129,9 +129,10 @@ plugins:
       minify_html: true
 
 nav:
-  - Home: index.md
+  - Home:
+    - Introduction: index.md
+    - Example: example.md
   - Documentation:
-    - About: about.md
     - Automatic Doc Generator: auto_generator.md
     - Tools: toolbox.md
   - API: api.md

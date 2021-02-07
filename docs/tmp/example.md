@@ -1,3 +1,8 @@
+# Example
+
+A `generate_docs.py` file like for `mkdocstrings-sourcelink` can look like:
+
+```python
 from pathlib import Path
 
 from mkdocstrings_sourcelink import MkDocGenerator
@@ -37,7 +42,9 @@ MkDocGenerator(
     pages,
     "https://github.com/AI2Business/mkdocstrings-sourcelink/blob/main",
     markdown_files=markdown_files,
-    template_dir=root / "docs" / "tmp",
     underline_title=True,
     source=":material-github::material-source-branch:",
 ).generate
+```
+
+And will generate the [docs](https://ai2business.github.io/mkdocstrings-sourcelink/)
