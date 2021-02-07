@@ -21,15 +21,21 @@ repos:
       - id: trailing-whitespace
       - id: check-yaml
         exclude: docs/mkdocs.yml
-    - repo: local
+    - repo: https://github.com/PyCQA/pylint
+      rev: 'pylint-2.6.0'
       hooks:
-        - id: pylint
-          name: pylint
-          entry: pylint mkdocstrings_sourcelink
-          language: system
-          pass_filenames: false
+      - id: pylint
+        name: pylint
+        entry: pylint mkdocstrings_sourcelink
+        language: system
+        pass_filenames: false
+        always_run: true
+    - repo: https://github.com/PyCQA/pydocstyle
+      rev: '5.1.1'
+      hooks:
         - id: pydocstyle
           name: pydocstyle
           entry: pydocstyle mkdocstrings_sourcelink
           language: system
           pass_filenames: false
+          always_run: true
