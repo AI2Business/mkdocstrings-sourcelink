@@ -35,7 +35,7 @@ root = Path(__file__).resolve().parents[1]
 MkDocGenerator(
     root / "docs" / "src",
     pages,
-    "https://github.com/AI2Business/mkdocstrings-sourcelink",
+    "https://github.com/AI2Business/mkdocstrings-sourcelink/blob/main",
     markdown_files=markdown_files,
     underline_title=True,
     source=":material-github::material-source-branch:",

@@ -10,7 +10,6 @@ setup(
     name="mkdocstrings_sourcelink",
     version="0.3.0",
     packages=find_packages(),
-    install_requires=["markdown", "sphinx", "black==20.8b1"],
     package_data={"": ["README.md"]},
     author="AI2Business",
     author_email="ai2business@protonmail.com",
