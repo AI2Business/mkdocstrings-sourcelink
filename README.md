@@ -4,6 +4,8 @@
 [![codecov](https://codecov.io/gh/AI2Business/mkdocstrings-sourcelink/branch/main/graph/badge.svg?token=DKE0SHCRF7)](https://codecov.io/gh/AI2Business/mkdocstrings-sourcelink)
 [![Code Style: Black](https://img.shields.io/badge/code%20style-black-black.svg)](https://github.com/ambv/black)
 [![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/AI2Business/mkdocstrings-sourcelink.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/AI2Business/mkdocstrings-sourcelink/context:python)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/mkdocstrings-sourcelink?logo=python&logoColor=yellow)](https://pypi.org/project/mkdocstrings-sourcelink/)
+[![PyPI](https://img.shields.io/pypi/v/mkdocstrings-sourcelink?logo=PyPi&logoColor=yellow)](https://pypi.org/project/mkdocstrings-sourcelink/)
 
 # mkdocstrings-sourcelink
 

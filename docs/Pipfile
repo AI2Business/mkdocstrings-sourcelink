@@ -16,7 +16,6 @@ mkdocs-minify-plugin = "*"
 mkdocs-redirects = "*"
 mkdocs-git-revision-date-plugin = "*"
 pymdown-extensions = "*"
-mkdocs-pymdownx-material-extras = "*"
 mkdocs-git-revision-date-localized-plugin = "*"
 pyspelling = "*"
 

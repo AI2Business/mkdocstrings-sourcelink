@@ -8,7 +8,7 @@ readme = this_file.parent / "README.md"
 
 setup(
     name="mkdocstrings_sourcelink",
-    version="0.3.0",
+    version="0.3.1",
     packages=find_packages(),
     package_data={"": ["README.md"]},
     url="https://ai2business.github.io/mkdocstrings-sourcelink/",
