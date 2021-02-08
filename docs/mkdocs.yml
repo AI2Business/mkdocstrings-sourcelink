@@ -5,7 +5,7 @@ site_author: AI2Business & coworkers
 
 repo_url: https://github.com/AI2Business/mkdocstrings-sourcelink
 repo_name: mkdocstrings-sourcelink
-edit_uri: edit/main/docs/src
+edit_uri: edit/main/docs/
 
 # Copyright
 copyright: Copyright &copy; 2021 - AI2Business
@@ -120,7 +120,6 @@ extra:
 
 plugins:
   - search
-  - mkdocs_pymdownx_material_extras
   - macros
   - mkdocstrings:
       watch:
@@ -137,3 +136,6 @@ nav:
     - Automatic Doc Generator: auto_generator.md
     - Tools: toolbox.md
   - API: api.md
+  - About:
+      - Contribution: contributing.md
+      - LICENSE: license.md

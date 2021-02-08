@@ -241,7 +241,11 @@ class MkDocGenerator(Utilities, BuilderMkDoc):
                 },
             }
             # Define the dictionary for the importing existing markdown files.
-            >>> markdown_files = {"HOME": {"index.md": ["../README.md"]}}
+            >>> markdown_files = {
+                "HOME": {"index.md": ["../README.md"]},
+                "CONTRIBUTING": {"contributing.md": ["../CONTRIBUTING.md"]},
+                "LICENSE": {"license.md": ["../LICENSE"]},
+            }
             >>> root = Path(__file__).resolve().parents[1]
             # Make use of the generate poperty of MkDocGenerator
             >>> MkDocGenerator(

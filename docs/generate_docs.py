@@ -30,7 +30,11 @@ pages = {
         ],
     },
 }
-markdown_files = {"HOME": {"index.md": ["../README.md"]}}
+markdown_files = {
+    "HOME": {"index.md": ["../README.md"]},
+    "CONTRIBUTING": {"contributing.md": ["../CONTRIBUTING.md"]},
+    "LICENSE": {"license.md": ["../LICENSE"]},
+}
 root = Path(__file__).resolve().parents[1]
 MkDocGenerator(
     root / "docs" / "src",

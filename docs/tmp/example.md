@@ -35,7 +35,11 @@ pages = {
         ],
     },
 }
-markdown_files = {"HOME": {"index.md": ["../README.md"]}}
+markdown_files = {
+    "HOME": {"index.md": ["../README.md"]},
+    "CONTRIBUTING": {"contributing.md": ["../CONTRIBUTING.md"]},
+    "LICENSE": {"license.md": ["../LICENSE"]},
+}
 root = Path(__file__).resolve().parents[1]
 MkDocGenerator(
     root / "docs" / "src",
@@ -48,3 +52,5 @@ MkDocGenerator(
 ```
 
 And will generate the [docs](https://ai2business.github.io/mkdocstrings-sourcelink/)
+
+> Note the docs will not be modified via `edit`, they will be modified in the docstrings of the source code.
