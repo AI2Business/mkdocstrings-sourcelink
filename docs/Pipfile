@@ -4,6 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+mkdocs-pymdownx-material-extras = "*"
 
 [dev-packages]
 click-man = "*"
