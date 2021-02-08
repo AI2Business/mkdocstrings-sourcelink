@@ -104,7 +104,8 @@ class Utilities(BuilderUtilities):
             cls (classmethod): Convert a function to be a class method.
             project_url (Union[str, Dict[str, str]]): URL to the repository like GitHub
                  https://github.com/AI2Business/mkdocstrings-sourcelink/.
-            source (str, optional): [description].
+            source (str, optional): Name or sticker name for rendering the link to the
+                 source.
 
         Returns:
             str: Hyperlink in html format with link to the repository.
