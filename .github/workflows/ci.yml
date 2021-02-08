@@ -76,7 +76,6 @@ jobs:
           pip install -r doc-requirements.txt
           python generate_docs.py
           mkdocs build --clean --verbose
-          rm -rf site/
           cd ~
       - name: Deploy documentation develops
         if: contains(github.ref, 'refs/heads/main')
