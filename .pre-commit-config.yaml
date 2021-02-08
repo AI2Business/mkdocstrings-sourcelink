@@ -3,8 +3,8 @@ repos:
       rev: '20.8b1'
       hooks:
         - id: black
-    - repo: https://github.com/pre-commit/mirrors-isort
-      rev: 'v5.7.0'  # Use the revision sha / tag you want to point at
+    - repo: https://github.com/PyCQA/isort
+      rev: '5.7.0'  # Use the revision sha / tag you want to point at
       hooks:
         - id: isort
     - repo: https://github.com/pre-commit/pre-commit-hooks
