@@ -9,23 +9,24 @@
 # requirements. To emit only development requirements, pass "--dev-only".
 
 -i https://pypi.org/simple/
-babel==2.9.1
+babel==2.9.1; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3'
 beautifulsoup4==4.10.0; python_version >= '3.1'
-bracex==2.2; python_version >= '3.6'
+bracex==2.2.1; python_version >= '3.6'
 click-man==0.4.1
 click==8.0.3; python_version >= '3.6'
 future==0.18.2; python_version >= '2.6' and python_version not in '3.0, 3.1, 3.2, 3.3'
-gitdb==4.0.7; python_version >= '3.4'
+gitdb==4.0.9; python_version >= '3.6'
 gitpython==3.1.24; python_version >= '3.7'
 html5lib==1.1; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4'
 htmlmin==0.1.12
+importlib-metadata==4.8.2; python_version < '3.10'
 jinja2==2.11.3; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4'
 joblib==1.1.0; python_version >= '3.6'
 jsmin==3.0.0
 livereload==2.6.3
 lunr[languages]==0.5.8
-lxml==4.6.3; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4'
-markdown==3.3.4; python_version >= '3.6'
+lxml==4.6.5
+markdown==3.3.6; python_version >= '3.6'
 markupsafe==1.1.1; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3'
 mkdocs-exclude==1.0.2
 mkdocs-git-revision-date-localized-plugin==0.8
@@ -46,13 +47,14 @@ python-dateutil==2.8.2; python_version >= '2.7' and python_version not in '3.0, 
 pytkdocs==0.10.1; python_version >= '3.6' and python_version < '4.0'
 pytz==2021.3
 pyyaml==6.0; python_version >= '3.6'
-regex==2021.10.21
+regex==2021.11.10
 six==1.16.0; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3'
-smmap==4.0.0; python_version >= '3.5'
-soupsieve==2.2.1; python_version >= '3.6'
+smmap==5.0.0; python_version >= '3.6'
+soupsieve==2.3.1; python_version >= '3.6'
 termcolor==1.1.0
 tornado==6.1; python_version >= '3.5'
 tqdm==4.62.3; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3'
-typing-extensions==3.10.0.2; python_version < '3.10'
-wcmatch==8.2; python_version >= '3.6'
+typing-extensions==4.0.1; python_version < '3.10'
+wcmatch==8.3; python_version >= '3.6'
 webencodings==0.5.1
+zipp==3.6.0; python_version >= '3.6'
