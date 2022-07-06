@@ -24,7 +24,7 @@ joblib==1.1.0; python_version >= '3.6'
 jsmin==3.0.0
 livereload==2.6.3
 lunr[languages]==0.5.8
-lxml==4.6.3; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4'
+lxml==4.9.1; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4'
 markdown==3.3.4; python_version >= '3.6'
 markupsafe==1.1.1; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3'
 mkdocs-exclude==1.0.2
