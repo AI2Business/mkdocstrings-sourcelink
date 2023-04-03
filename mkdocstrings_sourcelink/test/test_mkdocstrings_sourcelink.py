@@ -40,7 +40,6 @@ _tmp_dir.mkdir(parents=True, exist_ok=True)
 
 
 def test_basic_1():
-
     MkDocGenerator(
         _dir,
         pages,
@@ -50,7 +49,6 @@ def test_basic_1():
 
 
 def test_basic_2():
-
     MkDocGenerator(
         _dir,
         pages,
@@ -61,7 +59,6 @@ def test_basic_2():
 
 
 def test_dict_url():
-
     MkDocGenerator(
         _dir,
         pages,
@@ -73,7 +70,6 @@ def test_dict_url():
 
 
 def test_markdown():
-
     MkDocGenerator(
         _dir,
         pages,
@@ -84,7 +80,6 @@ def test_markdown():
 
 
 def test_tmp():
-
     MkDocGenerator(
         _dir,
         pages,
@@ -95,7 +90,6 @@ def test_tmp():
 
 
 def test_example():
-
     MkDocGenerator(
         _dir,
         pages,
