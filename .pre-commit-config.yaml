@@ -1,28 +1,28 @@
 repos:
     - repo: https://github.com/psf/black
-      rev: '21.10b0'
+      rev: '23.3.0'
       hooks:
         - id: black
     - repo: https://github.com/PyCQA/isort
-      rev: '5.10.0'  # Use the revision sha / tag you want to point at
+      rev: '5.12.0'  # Use the revision sha / tag you want to point at
       hooks:
         - id: isort
     - repo: https://github.com/pre-commit/pre-commit-hooks
-      rev: 'v4.0.1'
+      rev: 'v4.4.0'
       hooks:
         - id: check-added-large-files
     - repo: https://github.com/asottile/setup-cfg-fmt
-      rev: 'v1.19.0'
+      rev: 'v2.2.0'
       hooks:
         - id: setup-cfg-fmt
     - repo: https://github.com/pre-commit/pre-commit-hooks
-      rev: v4.0.1  # Use the ref you want to point at
+      rev: v4.4.0  # Use the ref you want to point at
       hooks:
       - id: trailing-whitespace
       - id: check-yaml
         exclude: docs/mkdocs.yml
     - repo: https://github.com/PyCQA/pylint
-      rev: 'v2.11.1'
+      rev: 'v3.0.0a6'
       hooks:
       - id: pylint
         name: pylint
@@ -30,7 +30,7 @@ repos:
         pass_filenames: false
         always_run: true
     - repo: https://github.com/PyCQA/pydocstyle
-      rev: '6.1.1'
+      rev: '6.3.0'
       hooks:
         - id: pydocstyle
           name: pydocstyle
